@@ -2,14 +2,14 @@
 
 Directory=$1
 
-grepout=grep -r "Failed password" $Directory/cscirepo_secure/var/log
+grepout= grep -rq "Failed password" $Directory
 
-UserInfoOut= 
 
-regexDateColon='(...... [0-9][0-9]:)'
+regexDateColon='[A-Z][a-z][a-z][ ].....'
 regexUser='(?<=for )(.*)(?= from)'
 regexIP='(?<=from )(.*)(?= port)'
 
+grep -q '$regexDateColon|$regexUser|$regexIP' $grepout >> failed_login_data.text
 
 
 
