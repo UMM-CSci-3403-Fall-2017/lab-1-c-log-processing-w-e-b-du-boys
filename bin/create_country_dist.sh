@@ -2,12 +2,7 @@
 
 directory=$1
 
-for files in $directory/*;
-do 
-	if [ -f $files/failed_login_data.txt];
-	then 
-		cat $files/failed_login_data.txt >> $directory/failed_log_collective.txt
-	fi
-done
+awk '{print $5}' $directory/failed_login_data.txt >> ip_test.txt|sort
 
-awk '{print $5}' $directory/failed_login_collective.txt| join 
+join -1 1 -2 1 ip_test.txt ../etc/country_IP_map.txt > country_mapped.txt
+
