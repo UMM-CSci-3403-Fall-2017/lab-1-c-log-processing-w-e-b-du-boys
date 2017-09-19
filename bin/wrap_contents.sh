@@ -1,9 +1,10 @@
 #!/bin/bash
 
 FileName=$1
-HeaderFooterFileName=$2
+HeaderFooterFileName1=$2_header.html
+HeaderFooterFileName2=$2_footer.html
 FileOut=$3
 
 
 
-cat ${HeaderFooterFileName}_header.html $FileName ${HeaderFooterFileName}_footer.html >> $FileOut
+cat $HeaderFooterFileName1 $FileName $HeaderFooterFileName2 > $FileOut
