@@ -21,8 +21,6 @@ done
 
 ./bin/assemble_report.sh scratch
 
-mv scratch/failed_login_summary.html $(pwd)
-
 rm -rf scratch
 
 

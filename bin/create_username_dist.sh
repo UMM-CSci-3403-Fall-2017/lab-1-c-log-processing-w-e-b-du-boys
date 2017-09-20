@@ -5,7 +5,7 @@ directory=$1
 
 #searching through all of the files in the specified directory
 
-cat grep -r "failed_login_data.txt" $directory > failed_login_collective.txt
+grep -r "failed_login_data.txt" $directory| cat > failed_login_collective.txt
 
 #The awk command is extracting the 4th group from the failed_login_collective.txt file, in other words it is extracting the username from each line.
 #this is then sorted that only one entery for every unique username is added to the resulting to piped out information 
