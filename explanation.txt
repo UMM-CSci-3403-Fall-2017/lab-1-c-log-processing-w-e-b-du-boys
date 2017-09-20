@@ -1,0 +1,5 @@
+Bats tests consitently failed with simple output for all of the create_ files. 
+We were unable to pinpoint why this error was happening.
+We believe it may been either something with html or possibly sorting of the files.
+Other than that no other known errors occurs, and we think the files are mostly operational aside from above error. 
+Due to time constraints and lack of ability to pin point error we are turning it in as is. 
